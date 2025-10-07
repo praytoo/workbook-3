@@ -34,20 +34,20 @@ public class FamousQuotes {
                 System.out.println(nrQuote2 + " " + quotes[i2 - 1]);
             } else if (anotherSaying.equalsIgnoreCase("no")) {
                 System.out.println("Thanks for stopping by");
+                scanner.nextLine();
             }
-            String randomQuote = "yes";
             System.out.println("Do you want to see a random quote?");
+            String randomQuote = "";
             if (randomQuote.equalsIgnoreCase("yes")) {
-                String quote = quotes[(int) Math.random()];
+                String quote = quotes[(int) Math.random()* 10];
                 randomQuote = scanner.nextLine();
                 System.out.println("Random:" + quote);
-            } else if (randomQuote.equalsIgnoreCase("no")) {
+            }else
                 System.out.println("Thanks for stopping by");
-            }
         }
         catch (Exception e) {
             System.out.println("Select a number between 1 and 10: " + e.getMessage());
         }
-
+        scanner.close();
     }
 }
