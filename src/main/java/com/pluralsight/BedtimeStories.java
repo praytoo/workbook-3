@@ -22,25 +22,22 @@ public class BedtimeStories {
         System.out.println("Enter your choice: ");
         String selectedStory = scanner.nextLine();
 
-        String fileName = "C:\\Users\\Student\\Documents\\MaryHadALittleLamb.txt";
+        String storyFolder = "C:\\BedtimeStories";
 
-        switch (selectedStory){
-            case "1" -> fileName = "Golidlocks.txt";
-            case "2" -> fileName = "HanselAndGretel.txt";
-            case "3" -> fileName = "MaryHadALittleLamb.txt";
-            default -> {
-                System.out.println("Invalid choice, goodnight");
-                return;
-            }
-        }
-        readStoryFile(fileName);
+        switch (storyFolder) {
+            case "1" -> readStoryFile(storyFolder + "Goldilocks.txt");
+            case "2" -> readStoryFile(storyFolder + "HanselAndGretel.txt");
+            case "3" -> readStoryFile(storyFolder + "MaryHadALittleLamb.txt");
+            default -> System.out.println("Invalid choice.");
+    }
+        readStoryFile(storyFolder);
         scanner.close();
     }
 
     private void readStoryFile(String fileName) {
         System.out.println("\n--- Reading " + fileName + " ---\n");
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader( fileName))) {
             String line;
             int lineNumber = 1;
 

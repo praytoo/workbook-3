@@ -3,9 +3,18 @@ package com.pluralsight;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class PayrollCalculator {
 
+    public void menu(){
+        System.out.println("Enter the name of the employee file to process: ");
+        Scanner scanner = new Scanner(System.in);
+        String file = scanner.nextLine();
+        System.out.println("Enter the name of the payroll file to create: ");
+        String payrollFile = scanner.nextLine();
+
+    }
     public PayrollCalculator() {
         readEmployeeFile();
     }
@@ -48,6 +57,7 @@ public class PayrollCalculator {
     }
 
     public static void main(String[] args) {
-        new PayrollCalculator();
+        PayrollCalculator payrollCalculator = new PayrollCalculator();
+        payrollCalculator.menu();
     }
 }
