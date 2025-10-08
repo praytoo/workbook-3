@@ -17,13 +17,13 @@ public class MiniExercisesList {
         int sum = 0;
         for(int number : numbers) {
             sum += number;
+        }
             System.out.println("SUM: " + sum);
 
         int by2 = 0;
         for (int number2 : numbers) {
             by2 = number2 * 2;
             System.out.println("By 2: " + by2);
-        }
         }
     }
 }
