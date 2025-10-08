@@ -5,29 +5,14 @@ import java.util.List;
 
 public class MiniExercisesList {
     public static void main(String[] args) {
-        List<String> friends = new ArrayList<>();
-        friends.add("Sara");
-        friends.add("Clara");
-        friends.add("Harold");
-        friends.add("Michael");
-        friends.add("Shannon");
+        List<String> friends = new ArrayList<>(List.of("Sara", "Clara", "Harold", "Michael", "Shannon"));
         friends.add("Alice");
         friends.remove(2);
 
         for (int i = 0; i < friends.size(); i++){
             System.out.println(friends.get(i));
         }
-        List <Integer> numbers = new ArrayList<>();
-        numbers.add(87);
-        numbers.add(99);
-        numbers.add(88);
-        numbers.add(100);
-        numbers.add(52);
-        numbers.add(67);
-        numbers.add(2);
-        numbers.add(12);
-        numbers.add(22);
-        numbers.add(82);
+        List <Integer> numbers = new ArrayList<>(List.of(87, 99, 88, 100, 52, 67, 2, 12, 22, 82));
 
         int sum = 0;
         for(int number : numbers) {
